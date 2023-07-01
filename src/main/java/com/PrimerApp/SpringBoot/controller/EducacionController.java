@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/educacion")
-@CrossOrigin(origins = {"https://proyecto-frontend-deploy.web.app"})
+@CrossOrigin(origins = {"https://proyecto-frontend-deploy.web.app", "http://localhost:4200"})
 public class EducacionController {
     
     @Autowired 
@@ -55,8 +55,8 @@ public class EducacionController {
     
     //editar educacion
     
-    @PutMapping("/editar/{id}")
-    public void editarEducacion(@PathVariable Long id,
+    //@PutMapping("/editar/{id}")
+    /*public void editarEducacion(@PathVariable Long id,
                              @RequestParam("establecimiento")String nuevoEst,
                              @RequestParam("titulo")String nuevoTitulo,
                              @RequestParam("fecha_desde")Date nuevoDesde,
@@ -72,18 +72,16 @@ public class EducacionController {
         educacion.setImagen(nuevaImagen);
         
         educacionService.editarEducacion(educacion);
-    }
+    }*/
     
 
 
- /*   @PutMapping ("/educacion/editar/{id}")
+ @PutMapping ("/editar/{id}")
     public void editarEducacion (@PathVariable Long id, 
                                  @RequestBody Educacion educacion){
         educacionService.buscarEducacion(id);
         educacionService.editarEducacion(educacion);
-    }
-    
- */   
+    } 
     
 }
 
