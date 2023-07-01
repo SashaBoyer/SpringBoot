@@ -76,12 +76,11 @@ public class EducacionController {
     
 
 
- @PutMapping ("/editar/{id}")
+    @PutMapping ("/editar/{id}")
     public void editarEducacion (@PathVariable Long id, 
                                  @RequestBody Educacion educacion){
         educacionService.buscarEducacion(id);
         educacionService.editarEducacion(educacion);
-    } 
-    
+    }
 }
 
